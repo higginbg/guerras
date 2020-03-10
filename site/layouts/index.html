@@ -1,67 +1,51 @@
 {{ define "main" }}
 
-<!-- Jumbotron -->
-{{ partial "jumbotron-home" .Params }}
+<!-- Menu -->
+{{ with .Params.menu }}
+  <div class="section bg-grey-1">
+    <div class="mw7 center pt4">
 
-<!-- Intro -->
-{{ partial "short-text" .Params.intro }}
+      <h2 id="menu" class="f2-m f1 tc lh-title mb4 mt4">{{ .heading }}</h2>
 
-<!-- Projects -->
-<div class="section bg-white">
-  <div class="mw7 center">
+      {{ range .list }}
 
-    <h2 class="f2 lh-title mb3">{{ .Params.projects.heading }}</h2>
-  
-    <p class="mb3">{{ .Params.projects.text }}</p>
-  
-    <div class="flex-l flex-row flex-wrap center mhn2-m mw7">
-  
-      {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
-        {{ .Render "li" }}
+        <h2 class="f2 lh-title mb3 ml3-m ml2">{{ .heading }}</h2>
+    
+        <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+
+          <div class="flex flex-row flex-wrap justify-center">
+            {{ range .list }}
+              {{ partial "menu-item" . }}
+            {{ end }}
+          </div>
+          
+        </div>
+
       {{ end }}
-  
-    </div>
-
-    {{ partial "button-forward" (dict "link" "/projects" "text" .Params.projects.button) }}
-
-  </div>
-</div>
-
-<!-- About -->
-{{ with .Params.about }}
-  <div class="section bg-debut relative footer-shadow-light">
-    <div class="mw7 center">
-      {{ partial "text-and-image" . }}
-      {{ partial "button-forward" (dict "link" "/about" "text" .button)}}
     </div>
   </div>
 {{ end }}
 
-<!-- Testimonials -->
-<div class="section bg-white neg-margin-offset">
+<!-- Wines -->
+<div class="section bg-secondary off-white">
   <div class="mw7 center">
 
-    <h2 class="f2 lh-title mb3">{{ .Params.testimonials.heading }}</h2>
-  
-    <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+    {{ with .Params.wines }}
+      <h2 id="wines" class="f2 tc lh-title mb4">{{ .heading }}</h2>
+    
+      <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 
-      {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
-        {{ with .Params.main }}
           <div class="flex flex-row flex-wrap justify-center">
-            {{ range first 3 .list }}
-              {{ partial "card-testimonial" . }}
+            {{ range .list }}
+              {{ partial "menu-item" . }}
             {{ end }}
           </div>
-        {{ end }}
-      {{ end }}
-  
-    </div> 
-  
-  {{ partial "button-forward" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
-
-  </div>
+          
+        </div>
+      </div>
+    {{ end }}
 </div>
 
-{{ partial "form-contact" }}
+{{ partial "form-contact" .Params.contact }}
 
 {{ end }}

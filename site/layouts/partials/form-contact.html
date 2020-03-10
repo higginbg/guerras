@@ -1,79 +1,28 @@
 
-<div class="section form-section bg-debut footer-shadow-light">
-  <div class="measure-narrow center">
+<div class="section bg-off-white">
+  <div class="mw7 center">
+
+    <h3 id="contact" class="f2 lh-title tc mb4">{{ .heading }}</h3>
     
-    <!-- Contact -->
-    <div class="neg-margin bg-white ba b--grey-1 pa3 br1 h-100 tile-shadow" data-aos="fade-up">
+    <div class="flex-m flex-row justify-between">
 
-      <h4 class="f3 lh-title tc mb4">Send us a message!</h4>
-    
-      <form novalidate id="form-contact" name="contact" netlify-honeypot="bot-field" netlify>
+      <div class="w-50-m w-40-l w-100 pa3-m pb3">
 
-        <input type="hidden" name="form-name" value="contact" />
+        <p class="f5 db mb4">{{ .text }}</p>
 
-        <!-- Name -->
-        <fieldset>
-          <label for="name">Name</label>
-          <input
-            required
-            aria-required="true"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            class="w-100 mb2"
-          >
-        </fieldset>
-        
-        <!-- Email -->
-        <fieldset>
-          <label for="email">Email</label>
-          <input
-            required
-            aria-required="true"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            class="w-100 mb2"
-          >
-        </fieldset>
-
-        <!-- Company -->
-        <fieldset>
-          <label for="company">Company</label>
-          <input
-            required
-            aria-required="true"
-            type="company"
-            id="company"
-            name="company"
-            placeholder="Company"
-            class="w-100 mb2"
-          >
-        </fieldset>
-    
-        <!-- Message -->
-        <fieldset>
-          <label for="message">Your message</label>
-          <textarea
-            required
-            aria-required="true"
-            id="message"
-            name="message"
-            placeholder="Message"
-            rows="8"
-            cols="80"
-            class="w-100 no-resize"
-          ></textarea>
-        </fieldset>
-        
-        <!-- Button -->
-        <div class="w-100 tc mt3">
-          <button type="submit" class="btn w-100 disabled">Send<i class="fas fa-paper-plane"></i></button>
+        <div class="flex flex-row items-center mb3">
+          <span class="f5 absolute db pt1"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+1-{{ .phone | urlize }}" class="f4 link ml4">{{ .phone }}</a>
         </div>
 
-      </form>
+        <div class="flex flex-row mb4">
+          <span class="f5 absolute db pt1"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span><a href="https://goo.gl/maps/RxEfYLJ3qL8gimDM9" class="f4 link pre ml4">{{ .address | markdownify }}</a>
+        </div>
+      </div>
+
+      <div class="w-50-m w-60-l w-100 pa3-m">
+        <iframe class="w-100 h5 ba b--grey-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.9761668069787!2d-122.78474808445782!3d45.005105879098174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54bfe39a663a4d5d%3A0xfe83b4a55e1b1fa7!2s206%20E%20Main%20St%2C%20Silverton%2C%20OR%2097381!5e0!3m2!1sen!2sus!4v1583862812783!5m2!1sen!2sus" frameborder="0" allowfullscreen=""></iframe>
+      </div>
+
     </div>
   </div>
 </div>

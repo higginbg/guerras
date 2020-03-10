@@ -1,19 +1,21 @@
 :root {
 	/* Colors */
-	--primary: rgba(84, 128, 0, 1);
-	--secondary: rgba(31, 78, 0, 1);
-	--highlight: rgba(205, 205, 205, 1);
+  --primary: rgba(81, 74, 48, 1);
+  --secondary: rgba(50, 15, 19, 1);
+	--highlight: rgba(248, 242, 242, 1);
 	--white: rgba(255, 255, 255, 1);
-	--off-white: rgba(245, 245, 245, 1);
-	--grey-1: rgba(225, 225, 225, 1);
-	--grey-2: rgba(175, 175, 175, 1);
-	--grey-3: rgba(105, 105, 105, 1);
+  --off-white: rgba(248, 242, 242, 1);
+  --grey-1: rgba(226, 217, 208, 1);
+	--grey-2: rgba(198, 179, 162, 1);
+	--grey-3: rgba(194, 172, 147, 1);
 	--grey-4: rgba(45, 45, 45, 1);
-	--black: rgba(20, 20, 20, 1);
+	--black: rgba(22, 18, 19, 1);
 
 	/* Typography */
-	--font-family: Muli, Lato, Nunito Sans, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-	--line-height: 1.5;
+	--font-family: 'Cormorant', serif, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  --font-header: 'Cormorant SC', serif;
+  --font-cursive: Italianno, cursive;
+  --line-height: 1.5;
 
 	--font-size: 20px;
 	--font-size-m: 22px;
@@ -23,11 +25,8 @@
 	--bold-font-weight: 700;
 
 	/* Sizing */
-	--nav-height: 80px;
-	--nav-height-small: 60px;
-	--footer-height: 250px;
-
-	--footer-height-medium: 50px;
+	--nav-height: 60px;
+	--nav-height-small: 40px;
 
 	--spacing-none: 0;
 	--spacing-extra-small: .25rem;
@@ -76,10 +75,10 @@
     0 16px 32px rgba(0,0,0,0.06);
 
   --nav-shadow:
-    0 1px 1px rgba(0,0,0,0.12),
-    0 2px 2px rgba(0,0,0,0.12),
-    0 4px 4px rgba(0,0,0,0.12),
-    0 8px 8px rgba(0,0,0,0.12);
+    0 1px 1px rgba(0,0,0,0.06),
+    0 2px 2px rgba(0,0,0,0.06),
+    0 4px 4px rgba(0,0,0,0.06),
+    0 8px 8px rgba(0,0,0,0.06);
 
   --menu-shadow:
     3px 0 20px rgba(0,0,0,0.19),

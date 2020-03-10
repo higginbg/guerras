@@ -8,28 +8,20 @@
 
 ::selection {
   background-color: var(--highlight);
-}
-
-#logo {
-  box-shadow: none;
-  
-  &:hover, &:focus, &:active {
-    background-color: var(--grey-4);
-    outline: none !important;
-  }
+  color: var(--black);
 }
 
 #call {
   
   &:focus, &:active {
-    background-color: var(--grey-4);
+    background-color: var(--secondary);
     outline: none !important;
   }
 }
 
 /* Used in the navbar */
 .divider-grey {
-  box-shadow: inset var(--spacing-small) 0 0 var(--black), var(--nav-shadow);
+  box-shadow: inset var(--spacing-small) 0 0 var(--off-white), var(--nav-shadow);
   /* Link hover states */
   
 
@@ -43,13 +35,13 @@
   }
 
   & ul .nav-link:hover, & ul .nav-link:focus {
-    border-left: var(--spacing-small) solid var(--primary);
+    border-left: var(--spacing-small) solid var(--secondary);
   }
 }
 
 @media (--breakpoint-medium) {
   .divider-grey {
-    box-shadow: inset 0 -4px 0 var(--black), var(--nav-shadow);
+    box-shadow: inset 0 -4px 0 var(--off-white), var(--nav-shadow);
     /* Link hover states */
     & a {
       border-left: none;
@@ -63,7 +55,7 @@
   
     & ul .nav-link:hover, & ul .nav-link:focus {
       border-left: none;
-      box-shadow: inset 0 -4px 0 var(--primary); 
+      box-shadow: inset 0 -4px 0 var(--secondary); 
     }
   }
 }
@@ -98,20 +90,44 @@
 
 #content-wrapper {
   padding-top: var(--nav-height);
-  padding-bottom: var(--footer-height);
 }
 
 nav {
   height: var(--nav-height);
 
+  #logo {
+    transition: var(--shadow-transition);
+    padding: 40px;
+    margin: var(--spacing-small);
+    background-color: var(--primary);
+    border-radius: 50%;
+  }
+
+  ul #logo {
+    padding: 60px;
+  }
+
   &.small {
     height: var(--nav-height-small);
+
+    #logo {
+      margin: 1px;
+      padding: 30px;
+      font-size: var(--spacing-large);
+    }
+
+    ul #logo {
+      margin: var(--spacing-extra-small);
+      padding: 40px;
+      font-size: var(--spacing-large);
+    }
   }
 }
 
 
 /* Account for nav when using hash links */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
 
   &[id]::before {
     display: block; 
@@ -120,25 +136,6 @@ h1, h2, h3, h4, h5, h6 {
     height: var(--nav-height); 
     visibility: hidden; 
     pointer-events: none;
-  }
-}
-
-footer {
-  height: var(--footer-height);
-  margin-top: calc(-1 * var(--footer-height));
-  -webkit-box-shadow: var(--footer-shadow);
-  -moz-box-shadow: var(--footer-shadow);
-  box-shadow: var(--footer-shadow);
-}
-
-@media (--breakpoint-medium) {
-  #content-wrapper {
-    padding-bottom: var(--footer-height-medium);
-  }
-
-  footer {
-    height: var(--footer-height-medium);
-    margin-top: calc(-1 * var(--footer-height-medium));
   }
 }
 

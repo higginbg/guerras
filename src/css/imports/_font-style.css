@@ -1,3 +1,15 @@
+
+.font-body {
+  font-family: var(--font-family);
+}
+
+.font-header {
+  font-family: var(--font-header);
+}
+.font-cursive {
+  font-family: var(--font-cursive);
+}
+
 .i         { font-style: italic; }
 .fs-normal { font-style: normal; }
 
