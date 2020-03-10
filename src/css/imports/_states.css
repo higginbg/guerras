@@ -9,14 +9,15 @@ input:focus, textarea:focus {
 .link, .md a {
   text-decoration: none;
   position: relative;
-  color: var(--secondary);
+  color: var(--primary);
+  border-bottom: 1px dotted var(--grey-2);
   transition: var(--shadow-transition) !important;
   cursor: pointer;
 
   &:before {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     content: '';
-    height: 2px;
+    height: 1px;
     position: absolute;
     bottom: -3px;
     left: 50%;
@@ -37,6 +38,7 @@ input:focus, textarea:focus {
 
   &:hover, &:focus, &:active {
     text-decoration: none;
+    border-bottom: 1px dotted transparent;
     outline: 0!important;
 
     &:before {

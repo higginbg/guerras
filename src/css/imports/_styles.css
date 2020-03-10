@@ -21,7 +21,7 @@
 
 /* Used in the navbar */
 .divider-grey {
-  box-shadow: inset var(--spacing-small) 0 0 var(--off-white), var(--nav-shadow);
+  box-shadow: inset var(--spacing-small) 0 0 var(--grey-1), var(--nav-shadow);
   /* Link hover states */
   
 
@@ -41,7 +41,7 @@
 
 @media (--breakpoint-medium) {
   .divider-grey {
-    box-shadow: inset 0 -4px 0 var(--off-white), var(--nav-shadow);
+    box-shadow: inset 0 -4px 0 var(--grey-1), var(--nav-shadow);
     /* Link hover states */
     & a {
       border-left: none;
@@ -248,4 +248,48 @@ h1, h2, h3, h4, h5, h6 {
   & .inner {
     overflow: hidden;
   }
+}
+
+hr.fancy-line { 
+  border: 0; 
+  height: 3px;
+  position: relative;
+  margin: 0.5em 0; /* Keep other elements away from pseudo elements*/
+}
+hr.fancy-line:before {
+  top: -0.5em;
+  height: 4em;
+}
+hr.fancy-line:after {
+  content:'';
+  height: 0.5em;   /* half the height of :before */
+  top: 3px;        /* height of hr*/
+}
+
+hr.fancy-line:before, hr.fancy-line:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+hr.fancy-line.dark, hr.fancy-line.dark:before {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+hr.fancy-line.light, hr.fancy-line.light:before {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 75%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(255,255,255,0.1)), color-stop(75%,rgba(255,255,255,0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
+}
+
+body, hr.fancy-line:after {
+  background: #f4f4f4;
 }

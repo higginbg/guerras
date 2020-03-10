@@ -1,4 +1,4 @@
-<nav id="nav" class="overflow-visible f5-m f5 w-100 bg-off-white o-100 fixed z-999 no-select animated divider-grey size-trans">
+<nav id="nav" class="overflow-visible f5-m f5 w-100 bg-grey-1 o-100 fixed z-999 no-select animated divider-grey size-trans">
 	<div class="overflow-visible w-100 h-100 flex flex-row justify-between relative">
 
     
@@ -9,19 +9,23 @@
     
     
 		<!-- Primary Nav -->
-		<div id="menu-container" class="overflow-visible bg-off-white center static-m absolute top-100 h-100-m vh-100 pb0-m pb3 bt-0-m bt b--grey-3 z-999">
+		<div id="menu-container" class="overflow-visible bg-grey-1 center static-m absolute top-100 h-100-m vh-100 pb0-m pb3 bt-0-m bt b--grey-3 z-999">
       <!-- Logo -->
-      <ul class="font-header overflow-x-visible-m overflow-x-hidden center w-auto-m bg-off-white w0 h-100-m h-90 flex flex-row-m flex-column items-start size-trans animated">
+      <ul class="font-header overflow-x-visible-m overflow-x-hidden center w-auto-m bg-grey-1 w0 h-100-m h-90 flex-m flex-row items-start size-trans animated">
         
-        {{ partial "nav-link" (dict "link" "/" "text" "Home") }}
-        {{ partial "nav-link" (dict "link" "#menu" "text" "Menu") }}
-        {{ partial "nav-link" (dict "link" "#wines" "text" "Wines") }}
+        <div class="w5-m flex-m flex-row h-100-m">
+          {{ partial "nav-link" (dict "link" "/" "text" "Home") }}
+          {{ partial "nav-link" (dict "link" "#menu" "text" "Menu") }}
+          {{ partial "nav-link" (dict "link" "#wines" "text" "Wines") }}
+        </div>
         
-        <div id="logo" class="db-m dn no-underline h-100 f1 lh-solid white nav-shadow">{{ partial "logo" . }}</div>
+        <div id="logo" class="db-m dn no-underline h-100-m h0 f1 lh-solid white nav-shadow">{{ partial "logo" . }}</div>
         
-				{{ partial "nav-link" (dict "link" "#about" "text" "About") }}
-				{{ partial "nav-link" (dict "link" "#events" "text" "Events") }}
-				{{ partial "nav-link" (dict "link" "#contact" "text" "Contact") }}
+        <div class="w5-m flex-m flex-row h-100-m">
+          {{ partial "nav-link" (dict "link" "#about" "text" "About") }}
+          {{ partial "nav-link" (dict "link" "#events" "text" "Events") }}
+          {{ partial "nav-link" (dict "link" "#contact" "text" "Contact") }}
+        </div>
 	
 			</ul>
 		</div>

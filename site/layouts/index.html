@@ -1,51 +1,44 @@
 {{ define "main" }}
 
 <!-- Menu -->
-{{ with .Params.menu }}
-  <div class="section bg-grey-1">
-    <div class="mw7 center pt4">
+<div class="section bg-off-white">
+  <div class="mw7 center pt4">
 
-      <h2 id="menu" class="f2-m f1 tc lh-title mb4 mt4">{{ .heading }}</h2>
+    {{ with .Params.menu }}
 
-      {{ range .list }}
+      <h2 id="menu" class="f1 tc lh-title mt4">{{ .heading }}</h2>
 
-        <h2 class="f2 lh-title mb3 ml3-m ml2">{{ .heading }}</h2>
-    
-        <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+      <hr class="fancy-line dark" />
+      <div class="pv2"></div>
 
-          <div class="flex flex-row flex-wrap justify-center">
-            {{ range .list }}
-              {{ partial "menu-item" . }}
-            {{ end }}
-          </div>
-          
-        </div>
+      {{ partial "menu" . }}
+    {{ end }}
 
-      {{ end }}
-    </div>
   </div>
-{{ end }}
+</div>
 
 <!-- Wines -->
 <div class="section bg-secondary off-white">
-  <div class="mw7 center">
+  <div class="mw7 center pt4">
 
-    {{ with .Params.wines }}
-      <h2 id="wines" class="f2 tc lh-title mb4">{{ .heading }}</h2>
     
-      <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+    {{ with .Params.wines }}
 
-          <div class="flex flex-row flex-wrap justify-center">
-            {{ range .list }}
-              {{ partial "menu-item" . }}
-            {{ end }}
-          </div>
-          
-        </div>
-      </div>
+      <h2 id="wines" class="f1 tc lh-title mt4">{{ .heading }}</h2>
+
+      <hr class="fancy-line light" />
+      <div class="pv2"></div>
+
+      {{ partial "menu" . }}
     {{ end }}
+
+  </div>
 </div>
 
-{{ partial "form-contact" .Params.contact }}
+<div class="section bg-off-white">
+  <div class="mw7 center">
+    {{ partial "section-contact" .Params.contact }}
+  </div>
+</div>
 
 {{ end }}

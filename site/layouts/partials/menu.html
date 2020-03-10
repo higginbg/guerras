@@ -1,0 +1,15 @@
+{{ range .list }}
+
+  <h2 class="f2 tc lh-title mv3" data-aos="fade-in">{{ .heading }}</h2>
+
+  <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+
+    <div class="flex flex-row flex-wrap justify-center">
+      {{ range .list }}
+        {{ partial "menu-item" . }}
+      {{ end }}
+    </div>
+    
+  </div>
+
+{{ end }}
