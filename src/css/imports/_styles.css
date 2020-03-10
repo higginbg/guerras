@@ -92,6 +92,14 @@
   padding-top: var(--nav-height);
 }
 
+.logo {
+  padding: 30px;
+  margin: var(--spacing-small);
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+}
+
 nav {
   height: var(--nav-height);
 
