@@ -1,4 +1,4 @@
-title = "NCM Inc. Commercial Renovators"
+title = "Guerra's Place"
 baseURL = "/"
 
 languageCode = "en-us"
@@ -14,7 +14,7 @@ canonifyURLs = true
   author = "Gabriel Higginbotham"
   github = "https://github.com/higginbg"
   og_image = "/img/logos/logo-large.png"
-  sitename = "NCM Inc"
+  sitename = "Guerra's Place"
 
 [languages]
   [languages.en]
