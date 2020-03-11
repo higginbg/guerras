@@ -15,7 +15,7 @@ const section = (data, classes) => <div className={`section ${classes}`}>
   </div>
 </div>;
 
-const intro = data => <div className='section bg-debut relative header-shadow'>
+const intro = data => <div className='section relative header-shadow'>
   <div className='flex-l mhn1-l ph3 center mw7'>
     <h2 className='f2 lh-title mb2 w-40-l'>{ data.get('heading') }</h2>
     <p className='w-60-l mb0'>{ data.get('text') }</p>
@@ -35,7 +35,7 @@ const about = (data, getAsset) => <div className='section bg-white'>
   </div>
 </div>;
 
-const projects = projects => <div className='section bg-debut relative footer-shadow-light'>
+const projects = projects => <div className='section relative footer-shadow-light'>
   <div className='ph3 mw7 center'>
     <h2 className='f2 lh-title mb2'>{projects.get('heading')}</h2>
     <p className='mw6'>{ projects.get('text') }</p>

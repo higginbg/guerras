@@ -94,12 +94,7 @@
 
 /* Background patterns from Toptal Subtle Patterns */
 
-.bg-debut {
-  background-image: url("/img/backgrounds/debut.png");
-  background-repeat: repeat;
-}
-
-.bg-debut-dark {
-  background-image: url("/img/backgrounds/debut-dark.png");
+.bg-concrete {
+  background-image: url("/img/backgrounds/vintage-concrete.png");
   background-repeat: repeat;
 }

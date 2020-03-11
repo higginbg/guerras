@@ -6,10 +6,6 @@ import lozad from 'lozad';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import 'lightgallery.js/dist/js/lightgallery.min.js';
-import 'lg-zoom.js/dist/lg-zoom.min.js';
-import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
-
 import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
 import menuClose from './js/modules/MenuClose';
@@ -26,9 +22,6 @@ const lozadEl = document.querySelectorAll('.lozad');
 if (lozadEl.length > 0) {
   const observer = lozad(lozadEl); // lazy loads elements with default selector as '.lozad'
   observer.observe();
-
-  const lozadTrig = document.querySelector('.lozad-trigger');
-  observer.triggerLoad(lozadTrig);
 }
 
 // AOS
@@ -37,18 +30,6 @@ AOS.init({
   duration: 1000,
   once: true,
   easing: 'ease'
-});
-
-// lightgallery.js
-lightGallery(document.getElementById('lightgallery'), {
-  thumbnail: true,
-  animateThumb: true,
-  showThumbByDefault: false,
-  subHtmlSelectorRelative: true,
-  scale: .5,
-  actualSize: false,
-  download: false,
-  selector: '.item'
 });
 
 

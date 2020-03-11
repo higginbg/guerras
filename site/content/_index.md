@@ -2,7 +2,7 @@
 title: Guerra's Place
 description: Guerra's Place
 subtitle: Fine Italian Dining
-image: /img/cover-home.png
+image: /img/cover-home.jpg
 menu:
   heading: Menu
   list:
@@ -96,7 +96,7 @@ contact:
   text: Please call to place an order.
   hours:
     "**Sunday – Thursday**: 10am – 8pm\n
-    **Friday – Saturday**: 10am – 12pm"
+    **Friday – Saturday**: 10am – 11pm"
   phone: (503) 873-8000
   address:
     "206 E Main St.\n

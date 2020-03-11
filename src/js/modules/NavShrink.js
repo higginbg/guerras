@@ -21,7 +21,6 @@ const navShrink = () => {
   shrink ? nav.classList.add(shrinkClass) : nav.classList.remove(shrinkClass);
 
   shrinkEl(shrink, nav, 'o-100', 'o-90');
-  shrinkEl(shrink, nav, 'f5-m', 'f6-m');
 
   // Decreases link fonts
   lastScroll = scrollPos();

@@ -96,35 +96,32 @@
   padding: 30px;
   margin: var(--spacing-small);
   background-color: var(--primary);
-  color: var(--white);
+  color: var(--off-white);
   border-radius: 50%;
+  transition: var(--shadow-transition) !important;
 }
 
 nav {
   height: var(--nav-height);
 
-  #logo {
-    transition: var(--shadow-transition);
+  .logo {
     padding: 40px;
-    margin: var(--spacing-small);
-    background-color: var(--primary);
-    border-radius: 50%;
   }
 
-  ul #logo {
+  ul .logo {
     padding: 60px;
   }
 
   &.small {
     height: var(--nav-height-small);
 
-    #logo {
+    .logo {
       margin: 1px;
       padding: 30px;
       font-size: var(--spacing-large);
     }
 
-    ul #logo {
+    ul .logo {
       margin: var(--spacing-extra-small);
       padding: 40px;
       font-size: var(--spacing-large);
@@ -140,8 +137,8 @@ h1, h2, h3, h4, h5, h6 {
   &[id]::before {
     display: block; 
     content: " "; 
-    margin-top: calc(-1 * (var(--nav-height) + var(--spacing-extra-large))); 
-    height: calc(var(--nav-height) + var(--spacing-extra-large)); 
+    margin-top: calc(-1 * (var(--nav-height) + var(--spacing-large) + 20px));
+    height: calc(var(--nav-height) + var(--spacing-large) + 20px);
     visibility: hidden; 
     pointer-events: none;
   }

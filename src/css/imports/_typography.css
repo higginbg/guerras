@@ -23,11 +23,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--off-white);
-  background-repeat: repeat;
   color: var(--grey-4);
   min-width: 400px;
   height: 100%;
-  padding-right: 0 !important;
 }
 
 p {
