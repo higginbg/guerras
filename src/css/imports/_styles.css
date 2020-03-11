@@ -8,7 +8,7 @@
 
 ::selection {
   background-color: var(--highlight);
-  color: var(--black);
+  color: var(--white);
 }
 
 #call {
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block; 
     content: " "; 
     margin-top: calc(-1 * var(--nav-height)); 
-    height: var(--nav-height); 
+    height: calc(var(--nav-height) + 80px); 
     visibility: hidden; 
     pointer-events: none;
   }
@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section {
-  padding: var(--spacing-large) var(--spacing-medium);
+  padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-extra-large) var(--spacing-medium);
 
   &.neg-margin-offset {
     padding: var(--spacing-large) var(--spacing-medium);
@@ -293,3 +293,11 @@ hr.fancy-line.light, hr.fancy-line.light:before {
 body, hr.fancy-line:after {
   background: #f4f4f4;
 }
+
+.st-bg { background:black; }
+.st-bg-today { background:yellow; border-left:1px solid yellow; border-right:1px solid yellow; }
+.st-dtitle { background:white; }
+.view-cap, .view-container-border { background-color:black; }
+.mv-dayname { color: red !important; };
+.mv-daynames-table { color:white; background:black; }
+.mv-event-container { border-top:1px solid black; }

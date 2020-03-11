@@ -6,6 +6,7 @@
 .h5 { height: 16rem; }
 .h6 { height: 20rem; }
 .h7 { height: 24rem; }
+.h8 { height: 32rem; }
 
 /* Height Percentages - Based off of height of parent */
 
@@ -41,6 +42,7 @@
   .h5-ns {  height: 16rem; }
   .h6-ns { height: 20rem; }
   .h7-ns { height: 24rem; }
+  .h8-ns { height: 32rem; }
   .h-25-ns { height: 25%; }
   .h-50-ns { height: 50%; }
   .h-75-ns { height: 75%; }
@@ -65,6 +67,7 @@
   .h5-m { height: 16rem; }
   .h6-m { height: 20rem; }
   .h7-m { height: 24rem; }
+  .h8-m { height: 32rem; }
   .h-25-m { height: 25%; }
   .h-50-m { height: 50%; }
   .h-75-m { height: 75%; }
@@ -89,6 +92,7 @@
   .h5-l { height: 16rem; }
   .h6-l { height: 20rem; }
   .h7-l { height: 24rem; }
+  .h8-l { height: 32rem; }
   .h-25-l { height: 25%; }
   .h-50-l { height: 50%; }
   .h-75-l { height: 75%; }

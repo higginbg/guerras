@@ -1,12 +1,13 @@
 {{ define "main" }}
 
+
 <!-- Menu -->
 <div class="section bg-off-white">
-  <div class="mw7 center pt4">
+  <div class="mw7 center">
 
     {{ with .Params.menu }}
 
-      <h2 id="menu" class="f1 tc lh-title mt4">{{ .heading }}</h2>
+      <h2 id="menu" class="f1 tc lh-title">{{ .heading }}</h2>
 
       <hr class="fancy-line dark" />
       <div class="pv2"></div>
@@ -17,14 +18,15 @@
   </div>
 </div>
 
+
 <!-- Wines -->
-<div class="section bg-secondary off-white">
-  <div class="mw7 center pt4">
+<div class="section bg-secondary off-white relative footer-shadow-light">
+  <div class="mw7 center">
 
     
     {{ with .Params.wines }}
 
-      <h2 id="wines" class="f1 tc lh-title mt4">{{ .heading }}</h2>
+      <h2 id="wines" class="f1 tc lh-title">{{ .heading }}</h2>
 
       <hr class="fancy-line light" />
       <div class="pv2"></div>
@@ -35,6 +37,51 @@
   </div>
 </div>
 
+
+<!-- About -->
+<div class="section bg-off-white">
+  <div class="mw6 center">
+
+    
+    {{ with .Params.about }}
+
+      <h2 id="about" class="f1 tc lh-title">{{ .heading }}</h2>
+
+      <hr class="fancy-line dark" />
+      <div class="pv2"></div>
+
+      <p>{{ .text }}</p>
+
+    {{ end }}
+
+  </div>
+</div>
+
+
+<!-- Events -->
+<div class="section bg-primary off-white relative footer-shadow-light">
+  <div class="mw7 center">
+
+    {{ with .Params.events }}
+
+      <h2 id="events" class="f1 tc lh-title">{{ .heading }}</h2>
+
+      <hr class="fancy-line light" />
+      <div class="pv2"></div>
+
+      <p>{{ .text }}</p>
+
+      <div class="pa3 br1 tile-shadow" style="background-color: #E3E9FF;">
+        <iframe class="w-100 h8-m h7" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23E3E9FF&amp;ctz=America%2FLos_Angeles&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23000000&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+    {{ end }}
+
+  </div>
+</div>
+
+
+<!-- Contact -->
 <div class="section bg-off-white">
   <div class="mw7 center">
     {{ partial "section-contact" .Params.contact }}

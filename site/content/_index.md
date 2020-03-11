@@ -86,6 +86,11 @@ wines:
       - name: Chardonney
         description: Chardonnay is a white wine made from the Chardonnay wine grape. Chardonnay is a white wine made from the Chardonnay wine grape. Chardonnay is a white wine made from the Chardonnay wine grape.
         price: 56
+about:
+  heading: About
+  text: Nestled in the heart of the Willamette Valley, Silverton is the home of our family-owned Italian restaurant. Sharing our namesake, Guerra's is an extension of our values and our commitment to fine dining. We hope you feel like a part of the family.
+events:
+  heading: Events
 contact:
   heading: Contact
   text: Please call to place an order.
@@ -93,7 +98,4 @@ contact:
   address:
     "206 E Main St.\n
     Silverton, OR 97381"
-about:
-  heading: ""
-  text: ""
 ---
