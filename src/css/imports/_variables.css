@@ -2,7 +2,6 @@
 	/* Colors */
   --primary: rgba(96, 97, 59, 1); /* rgba(81, 74, 48, 1); */
   --secondary: rgba(50, 15, 19, 1);
-	--highlight: var(--primary);
 	--white: rgba(255, 255, 255, 1);
   --off-white: rgba(248, 242, 242, 1);
   --grey-1: rgba(226, 217, 208, 1);
@@ -10,6 +9,7 @@
 	--grey-3: rgba(194, 172, 147, 1);
 	--grey-4: rgba(45, 45, 45, 1);
 	--black: rgba(22, 18, 19, 1);
+	--highlight: var(--grey-1);
 
 	/* Typography */
 	--font-family: 'Cormorant', serif, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;

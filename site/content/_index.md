@@ -94,6 +94,9 @@ events:
 contact:
   heading: Contact
   text: Please call to place an order.
+  hours:
+    "**Sunday – Thursday**: 10am – 8pm\n
+    **Friday – Saturday**: 10am – 12pm"
   phone: (503) 873-8000
   address:
     "206 E Main St.\n
