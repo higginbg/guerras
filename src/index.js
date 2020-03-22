@@ -10,9 +10,9 @@ import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
 import menuClose from './js/modules/MenuClose';
 
-import { validateFile, validate, handleForm } from './js/modules/HandleForm';
+import { validate, handleForm } from './js/modules/HandleForm';
 import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
-import { nav, drpdwn, drpdwnBtn, form, requiredInputs, resume, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
+import { nav, drpdwn, drpdwnBtn, form, requiredInputs, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
 
 
 /* Initiations */
@@ -40,7 +40,7 @@ AOS.init({
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
   AOS.refresh();
-  navHighlight(drpdwn, isRoot);
+  navHighlight(drpdwn);
 });
 
 window.addEventListener('resize', menuClose);
@@ -49,7 +49,7 @@ window.addEventListener('scroll', navShrink);
 
 window.addEventListener('click', ({ target }) => {
 
-  // close menu on click 
+  // close menu on click
   const tag = target.tagName.toLowerCase();
   if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
     menuClose();
@@ -79,5 +79,3 @@ if (requiredInputs) {
     input.addEventListener('blur', e => validate(e, input));
   }
 }
-
-resume && resume.addEventListener('change', e => validateFile(resume));

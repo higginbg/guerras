@@ -5,7 +5,9 @@
     <!-- Menu Button (for small screens) -->
     <button class="nav-link dn-l w3 mr2 f4 bg-none pa1 animated enlarge"><i class="fas fa-bars"></i></button>
     
-    <div href="/" class="logo dn-l db no-underline h-100 f2 lh-solid nav-shadow">{{ partial "logo" . }}</div>
+    <div class="h2" data-aos="zoom-in" data-aos-delay=750>
+      <a href="#home" class="logo dn-l db no-underline h-100 f2 lh-solid nav-shadow">{{ partial "logo" . }}</a>
+    </div>
     
     
 		<!-- Primary Nav -->
@@ -19,8 +21,8 @@
           {{ partial "nav-link" (dict "link" "#wines" "text" "Wines") }}
         </div>
         
-        <div class="h2" data-aos="zoom-in" data-aos-delay=750>
-          <div class="logo db-l dn no-underline h-100-l h0 f1 lh-solid nav-shadow">{{ partial "logo" . }}</div>
+        <div class="db-l dn h2" data-aos="zoom-in" data-aos-delay=750>
+          <div class="logo no-underline h-100-l h0 f1 lh-solid nav-shadow">{{ partial "logo" . }}</div>
         </div>
         
         <div class="w5-l flex-l flex-row h-100-l">

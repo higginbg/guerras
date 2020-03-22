@@ -1,6 +1,6 @@
 // Highlight nav link when current page
 
-import { drpdwn, isRoot } from '../variables';
+import { drpdwn } from '../variables';
 
 const navHighlight = () => {
   const links = drpdwn.querySelectorAll('li a');
@@ -11,13 +11,12 @@ const navHighlight = () => {
     const navLoc = link.href.split('/');
     const checkNav = navLoc[navLoc.length - 1];
 
-    const isHome = !checkNav && isRoot;
     const isCurrentPath = page.toLowerCase() === link.text.toLowerCase();
     const isCurrentPage = page === checkNav;
 
-    if (isCurrentPath || isHome) {
+    if (isCurrentPath) {
 
-      if (isCurrentPage || isHome) {
+      if (isCurrentPage) {
 
       }
     }

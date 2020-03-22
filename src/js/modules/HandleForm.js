@@ -2,7 +2,6 @@ import Swal from 'sweetalert2';
 
 import { form, requiredInputs } from '../variables';
 
-let validateFile;
 let validate;
 let handleForm;
 
@@ -143,26 +142,6 @@ if (form) {
     }
   };
 
-  validateFile = el => {
-    const filePath = el.value;
-    const extn = /(\.pdf|\.doc|\.docx)$/i;
-
-    const uploadError = msg => {
-      Swal.fire({
-        icon: 'error',
-        title: 'Upload error.',
-        text: msg
-      });
-      el.value = '';
-    };
-
-    if (filePath !== '' && !extn.test(filePath)) {
-      uploadError('Please upload only pdf, doc, docx.');
-    } else if (el.files[0].size > 1000000) {
-      uploadError('Maximum file size is 1 MB.');
-    }
-  };
-
   const invalid = 'invalid';
   let flag = false;
 
@@ -195,4 +174,4 @@ if (form) {
   };
 }
 
-export { validateFile, validate, handleForm };
+export { validate, handleForm };
