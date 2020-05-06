@@ -1,17 +1,8 @@
-baseurl = "https://guerrasplace.netlify.app/"
+baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Guerra's Place"
 pluralizeListTitles = false
-
-languageCode = "en-us"
-DefaultContentLanguage = "en"
-paginate = 10
-
-enableEmoji = true
-enableGitInfo = true
-enableRobotsTXT = true
-canonifyURLs = true
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
