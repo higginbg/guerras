@@ -1,4 +1,4 @@
-baseurl = "/"
+baseURL = "https://guerrasplace.netlify.app/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Guerra's Place"
