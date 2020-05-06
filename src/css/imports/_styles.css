@@ -90,7 +90,7 @@
 
 .logo {
   padding: 30px;
-  margin: var(--spacing-extra-small) var(--spacing-small);
+  margin: var(--spacing-small);
   background-color: var(--primary);
   color: var(--off-white);
   border-radius: 50%;
@@ -179,79 +179,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.flip-card {
-  height: 100%;
-  perspective: 1000px;
-  cursor: default;
-
-  & .link {
-    pointer-events: none;
-    touch-action: none;
-  }
-  
-
-  &:hover, &:active, &:focus, &:focus-within {
-    outline: 0!important;
-
-    & .link {
-      pointer-events: auto;
-      touch-action: auto;
-      cursor: pointer;
-    }
-
-    & .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    & .flip-card-back, & .flip-card-front {
-      backface-visibility: hidden;
-    }
-
-    & .flip-card-back .inner {
-      overflow: auto;
-    }
-  }
-}
-
-.contact {
-  flex-basis: 40%;
-}
-
-.flip-card-inner {
-  height: 100%;
-  position: relative;
-  transition: transform 0.8s ease;
-  transform: rotateX(0deg);
-  transform-style: preserve-3d;
-  -webkit-box-shadow: var(--flip-shadow);
-  -moz-box-shadow: var(--flip-shadow);
-  box-shadow: var(--flip-shadow);
-  border-radius: var(--border-radius);
-}
-
-.flip-card-front {
-  position: relative;
-  transform: rotateY(0deg);
-}
-
-.flip-card-front, .flip-card-back {
-  -moz-backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.flip-card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
-
-  & .inner {
-    overflow: hidden;
-  }
-}
-
 hr.fancy-line { 
   border: 0; 
   height: 3px;
@@ -295,11 +222,3 @@ hr.fancy-line.light, hr.fancy-line.light:before {
 body, hr.fancy-line:after {
   background: #f4f4f4;
 }
-
-.st-bg { background:black; }
-.st-bg-today { background:yellow; border-left:1px solid yellow; border-right:1px solid yellow; }
-.st-dtitle { background:white; }
-.view-cap, .view-container-border { background-color:black; }
-.mv-dayname { color: red !important; };
-.mv-daynames-table { color:white; background:black; }
-.mv-event-container { border-top:1px solid black; }

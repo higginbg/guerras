@@ -1,5 +1,5 @@
+baseURL = "https://guerrasplace.netlify.app/"
 title = "Guerra's Place"
-baseURL = "/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"

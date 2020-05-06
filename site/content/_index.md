@@ -50,8 +50,8 @@ menu:
       - name: Chardonney
         description: Chardonnay is a white wine made from the Chardonnay wine grape. Chardonnay is a white wine made from the Chardonnay wine grape. Chardonnay is a white wine made from the Chardonnay wine grape.
         price: 56
-wines:
-  heading: Wines
+wine:
+  heading: Wine
   list:
     - heading: Italy
       list:
