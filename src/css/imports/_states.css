@@ -10,7 +10,6 @@ input:focus, textarea:focus {
   text-decoration: none;
   position: relative;
   color: var(--primary);
-  border-bottom: 1px dotted var(--grey-2);
   transition: var(--shadow-transition) !important;
   cursor: pointer;
 
@@ -19,7 +18,7 @@ input:focus, textarea:focus {
     content: '';
     height: 1px;
     position: absolute;
-    bottom: -3px;
+    bottom: -1px;
     left: 50%;
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
@@ -38,7 +37,6 @@ input:focus, textarea:focus {
 
   &:hover, &:focus, &:active {
     text-decoration: none;
-    border-bottom: 1px dotted transparent;
     outline: 0!important;
 
     &:before {

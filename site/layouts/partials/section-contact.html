@@ -6,15 +6,15 @@
       <p class="db mb4">{{ .text }}</p>
 
       <div class="flex flex-row mb3">
-        <span class="absolute db pt1"><i class="fas fa-calendar-week" aria-hidden="true"></i></span><span class="pre ml4">{{ .hours | markdownify }}</span>
+        <span class="absolute db pt1 grey-3"><i class="fas fa-calendar-week" aria-hidden="true"></i></span><span class="pre ml4">{{ .hours | markdownify }}</span>
       </div>
 
       <div class="flex flex-row items-center mb3">
-        <span class="absolute db pt1"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+1-{{ .phone | urlize }}" class="link ml4">{{ .phone }}</a>
+        <span class="absolute db pt1 grey-3"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+1-{{ .phone | urlize }}" class="link ml4">{{ .phone }}</a>
       </div>
 
       <div class="flex flex-row mb3">
-        <span class="absolute db pt1"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span><a href="https://goo.gl/maps/RxEfYLJ3qL8gimDM9" class="link pre ml4">{{ .address | markdownify }}</a>
+        <span class="absolute db pt1 grey-3"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span><a href="https://goo.gl/maps/RxEfYLJ3qL8gimDM9" class="link pre ml4">{{ .address | markdownify }}</a>
       </div>
     </div>
 
