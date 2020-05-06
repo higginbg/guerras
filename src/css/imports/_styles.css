@@ -21,7 +21,7 @@
 
 /* Used in the navbar */
 .divider-grey {
-  box-shadow: inset var(--spacing-small) 0 0 var(--grey-1), var(--nav-shadow);
+  box-shadow: inset var(--spacing-small) 0 0 transparent, var(--nav-shadow);
   /* Link hover states */
   
 
@@ -41,7 +41,7 @@
 
 @media (--breakpoint-medium) {
   .divider-grey {
-    box-shadow: inset 0 -4px 0 var(--grey-1), var(--nav-shadow);
+    box-shadow: inset 0 -4px 0 transparent, var(--nav-shadow);
     /* Link hover states */
     & a {
       border-left: none;
@@ -88,10 +88,6 @@
   min-height: 100vh;
 }
 
-#content-wrapper {
-  padding-top: var(--nav-height);
-}
-
 .logo {
   padding: 30px;
   margin: var(--spacing-extra-small) var(--spacing-small);
@@ -105,24 +101,32 @@ nav {
   height: var(--nav-height);
   transition: var(--size-transition) !important;
 
-  .logo {
+  & .logo {
     padding: 40px;
   }
 
-  ul .logo {
+  & ul .logo {
     padding: 60px;
   }
 
   &.small {
     height: var(--nav-height-small);
 
-    .logo {
+    & .nav-link {
+      font-size: 0.9em;
+    }
+
+    & .background {
+      opacity: 1;
+    }
+
+    & .logo {
       margin: 1px;
       padding: 30px;
       font-size: var(--spacing-large);
     }
 
-    ul .logo {
+    & ul .logo {
       margin: var(--spacing-extra-small);
       padding: 40px;
       font-size: var(--spacing-large);
