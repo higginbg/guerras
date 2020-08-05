@@ -222,8 +222,8 @@ contact:
   heading: Contact
   text: Please call to place an order.
   hours:
-    "**Sunday – Thursday**: 10am – 8pm\n
-    **Friday – Saturday**: 10am – 11pm"
+    "**Tuesday – Sunday**: 10am – 8pm\n
+    **Monday**: Closed"
   phone: (503) 873-8000
   address:
     "206 E Main St.\n
