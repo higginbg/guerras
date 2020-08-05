@@ -2,10 +2,6 @@
   border-color: var(--primary);
 }
 
-.b--secondary {
-  border-color: var(--secondary);
-}
-
 .b--highlight {
   border-color: var(--highlight);
 }

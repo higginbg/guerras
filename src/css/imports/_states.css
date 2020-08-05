@@ -47,12 +47,12 @@ input:focus, textarea:focus {
 
 .nav-link {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--off-white);
   transition: var(--shadow-transition) !important;
   cursor: pointer;
 
   &:focus, &:active {
-    background-color: var(--secondary);
+    background-color: var(--parimary);
     color: var(--off-white);
     outline: 0!important;
   }

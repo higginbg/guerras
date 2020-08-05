@@ -3,9 +3,7 @@
   {{ partial "head" . }}
   <body class="preload">
 
-    {{ block "header" . }}{{ partial "nav" . }}{{end}}
-
-    
+    {{ block "header" . }}{{ partial "nav" . }}{{ end }}
 
     <div id="page-container" class="overflow-hidden">
       <div id="content-wrapper">
@@ -15,6 +13,8 @@
       </div>
 
     </div>
+
+    {{ partial "footer" . }}
 
     {{ $script := .Site.Data.webpack.main }}
     

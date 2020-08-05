@@ -69,13 +69,6 @@ sup {
   margin-bottom: 0;
 }
 
-.indent-reverse {
-  text-indent: -1em;
-  padding-left: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .small-caps {
   font-variant: small-caps;
 }
