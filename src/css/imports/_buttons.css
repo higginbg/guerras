@@ -45,13 +45,13 @@
     border: 1px solid var(--grey-2);
   
     &:hover {
-      
       box-shadow: var(--button-press-shadow);
     }
   
     &.active {
       background-image: linear-gradient(var(--primary), rgba(74, 10, 18, 1));
       box-shadow: var(--tile-shadow);
+      border: 1px solid transparent;
     }
   }
 
