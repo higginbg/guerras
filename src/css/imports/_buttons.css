@@ -47,11 +47,31 @@
     &:hover {
       box-shadow: var(--button-press-shadow);
     }
+
+    &:focus, &:active {
+      box-shadow: var(--button-press-shadow);
+      outline: 0!important;
+      border: 1px solid transparent;
+      color: var(--off-white);
+    }
+
+    &:focus {
+      color: var(--grey-3);
+    }
+
+    &:active {
+      color: var(--off-white);
+    }
   
     &.active {
       background-image: linear-gradient(var(--primary), rgba(74, 10, 18, 1));
       box-shadow: var(--tile-shadow);
       border: 1px solid transparent;
+      cursor: default;
+
+      &:focus, &:active {
+        color: var(--off-white);
+      }
     }
   }
 
