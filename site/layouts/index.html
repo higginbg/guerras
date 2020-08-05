@@ -5,16 +5,17 @@
 {{ partial "jumbotron" .Params }}
 
 <!-- Menu -->
-<div class="section bg-off-white">
-  <div class="mw7 center">
+<div id="menu" class="section bg-off-white">
+  <div class="mw6 center">
 
-    {{ with .Params.menu }}
-
-      <h2 id="menu" class="f1 tc lh-title">{{ .heading }}</h2>
-
-      {{ partial "line-dark" }}
-
-      {{ partial "menu" . }}
+    {{ range .Params.menu.list }}
+      <div class="pb5">
+        <h2 class="f1 tc lh-title">{{ .heading }}</h2>
+  
+        {{ partial "line-dark" }}
+  
+        {{ partial "menu" . }}
+      </div>
     {{ end }}
 
   </div>
@@ -23,7 +24,7 @@
 
 <!-- Wine -->
 <div class="section bg-secondary off-white relative footer-shadow-light">
-  <div class="mw7 center">
+  <div class="mw6 center">
     
     {{ with .Params.wine }}
 

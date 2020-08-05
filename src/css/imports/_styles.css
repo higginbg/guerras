@@ -195,7 +195,7 @@ hr.fancy-line {
 }
 hr.fancy-line:before {
   top: -0.5em;
-  height: 4em;
+  height: 0;
 }
 hr.fancy-line:after {
   content:'';
@@ -210,23 +210,13 @@ hr.fancy-line:before, hr.fancy-line:after {
 }
 
 hr.fancy-line.dark, hr.fancy-line.dark:before {
-  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
 }
 
 hr.fancy-line.light, hr.fancy-line.light:before {
-  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 75%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(255,255,255,0.1)), color-stop(75%,rgba(255,255,255,0)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
   background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 75%);
 }
 
 body, hr.fancy-line:after {
-  background: #f4f4f4;
+  background: transparent;
 }

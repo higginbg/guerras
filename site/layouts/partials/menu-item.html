@@ -1,12 +1,11 @@
-<div class="w-33-l w-50-ns w-100 pa2-ns pv2 mb3">
-  <div class="h-100 pv1 ph2" data-aos="fade-in" data-aos-duration=750>
-
-    <div class="flex flex-row justify-between mb1">
-      <h3 class="f4">{{ .name }}</h3>
-      <p class="f5">{{ .price }}</p>
-    </div>
-
-    <p>{{ .description }}</p>
-
-  </div>
+<div data-aos="fade-in" data-aos-duration="750">
+  {{ if .description }}
+    <h3 class="f4">{{ .name }}</h3>
+    <p class="pv1">{{ .description }}</p>
+  {{ else }}
+    <h4 class="f5">{{ .name }}</h4>
+    {{ with .note }}
+      <p class="pl3 mb1">{{ . }}</p>
+    {{ end }}
+  {{ end }}
 </div>

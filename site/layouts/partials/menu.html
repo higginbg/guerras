@@ -1,15 +1,20 @@
 {{ range .list }}
 
-  <h2 class="f2 tc lh-title mv3" data-aos="fade-in">{{ .heading }}</h2>
-
-  <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
-
-    <div class="flex flex-row flex-wrap justify-center">
-      {{ range .list }}
-        {{ partial "menu-item" . }}
-      {{ end }}
-    </div>
-    
+  <div class="mt5 mb4">
+    <h2 class="f2 b lh-title" data-aos="fade-in">{{ .heading }}</h2>
+    {{ with .subheading }}
+      <h3 class="f5 b lh-title mt2" data-aos="fade-in">{{ . }}</h3>
+    {{ end }}
   </div>
+
+  <div class="mt3">
+    {{ range .list }}
+      {{ partial "menu-item" . }}
+    {{ end }}
+  </div>
+
+  {{ with .footnote }}
+    <p class="f6" style="margin-top: -3em;" data-aos="fade-in">{{ . }}</p>
+  {{ end }}
 
 {{ end }}
