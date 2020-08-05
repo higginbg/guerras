@@ -1,11 +1,12 @@
 {{ range .list }}
 
-  <div class="mt5 mb4">
-    <h2 class="f2 b lh-title" data-aos="fade-in">{{ .heading }}</h2>
-    {{ with .subheading }}
-      <h3 class="f5 b lh-title mt2" data-aos="fade-in">{{ . }}</h3>
-    {{ end }}
-  </div>
+  <div class="mt2 mb5">
+    <div class="mb4">
+      <h2 class="f2 lh-title" data-aos="fade-in">{{ .heading }}</h2>
+      {{ with .subheading }}
+        <h3 class="f5 lh-title mt2" data-aos="fade-in">({{ . }})</h3>
+      {{ end }}
+    </div>
 
   <div class="mt3">
     {{ range .list }}
@@ -16,5 +17,7 @@
   {{ with .footnote }}
     <p class="f6" style="margin-top: -3em;" data-aos="fade-in">{{ . }}</p>
   {{ end }}
+
+</div>
 
 {{ end }}

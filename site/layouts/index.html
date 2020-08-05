@@ -8,12 +8,16 @@
 <div id="menu" class="section bg-off-white">
   <div class="mw6 center">
 
+    <h2 class="f1 tc lh-title">Menu</h2>
+    {{ partial "line-dark" }}
+
+    <div class="tc mt4 no-select">
+      <button id="brunch-btn" class="btn menu-btn w4 mr1"><span class="f3">Brunch</span></button>
+      <button id="dinner-btn" class="btn menu-btn w4 ml1"><span class="f3">Dinner</span></button>
+    </div>
+
     {{ range .Params.menu.list }}
-      <div class="pb5">
-        <h2 class="f1 tc lh-title">{{ .heading }}</h2>
-  
-        {{ partial "line-dark" }}
-  
+      <div id="{{ .heading | lower }}-menu" class="dn mt4">
         {{ partial "menu" . }}
       </div>
     {{ end }}
@@ -23,7 +27,7 @@
 
 
 <!-- Wine -->
-<div class="section bg-black off-white relative footer-shadow-light">
+<div class="section bg-grey-4 off-white relative footer-shadow-light">
   <div class="mw6 center">
     
     {{ with .Params.wine }}
@@ -59,7 +63,7 @@
 
 
 <!-- Events -->
-<div class="section bg-black off-white relative footer-shadow-light">
+<div class="section bg-grey-4 off-white relative footer-shadow-light">
   <div class="mw7 center">
 
     {{ with .Params.events }}

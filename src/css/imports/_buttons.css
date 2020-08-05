@@ -1,18 +1,23 @@
 .btn {
   display: inline-block;
-  border-radius: var(--border-radius-pill);
+  border-radius: var(--border-radius);
   padding: 18px 16px;
   font-size: var(--font-size-m);
   line-height: 1.25;
   border: 2px solid transparent;
-  background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
+  background-image: linear-gradient(var(--white), var(--grey-1));
   text-decoration: none;
-  color: var(--off-white);
+  color: var(--primary);
   text-align: center;
   transition: var(--shadow-transition) !important;
   box-shadow: var(--tile-shadow);
   background-origin: border-box;
   user-select: none;
+
+  &.active, &:focus {
+    background-image: linear-gradient(var(--primary), rgba(74, 10, 18, 1));
+    color: var(--off-white)
+  }
   
   i {
     opacity: 0;
@@ -29,9 +34,29 @@
   }
 
   &:focus, &:active {
-    background-image: linear-gradient(var(--grey-3), var(--grey-3));
     box-shadow: var(--button-press-shadow);
+    border: 2px solid transparent;
     outline: 0!important;
+  }
+
+  &.menu-btn {
+    box-shadow: none;
+    background-image: linear-gradient(var(--white), var(--grey-1));
+    border: 2px solid var(--grey-2);
+  
+    &:hover {
+      
+      box-shadow: var(--button-press-shadow);
+    }
+  
+    &.active {
+      background-image: linear-gradient(var(--primary), rgba(74, 10, 18, 1));
+      box-shadow: var(--tile-shadow);
+    }
+  }
+
+  &:active {
+    background-image: linear-gradient(var(--grey-2), rgba(65, 65, 65, 1));
   }
 }
 

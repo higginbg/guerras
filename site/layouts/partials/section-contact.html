@@ -6,15 +6,15 @@
       <p class="db mb4">{{ .text }}</p>
 
       <div class="flex flex-row mb3">
-        <span class="absolute db pt1 grey-1"><i class="fas fa-calendar-week" aria-hidden="true"></i></span><span class="pre ml4">{{ .hours | markdownify }}</span>
+        <span class="absolute db pt1 grey-2"><i class="fas fa-calendar-week" aria-hidden="true"></i></span><span class="pre ml4">{{ .hours | markdownify }}</span>
       </div>
 
       <div class="flex flex-row items-center mb3">
-        <span class="absolute db pt1 grey-1"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+1-{{ .phone | urlize }}" class="link ml4">{{ .phone }}</a>
+        <span class="absolute db pt1 grey-2"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+1-{{ .phone | urlize }}" class="link ml4">{{ .phone }}</a>
       </div>
 
       <div class="flex flex-row mb3">
-        <span class="absolute db pt1 grey-1"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span><a href="https://goo.gl/maps/RxEfYLJ3qL8gimDM9" class="link pre ml4">{{ .address | markdownify }}</a>
+        <span class="absolute db pt1 grey-2"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span><a href="https://goo.gl/maps/RxEfYLJ3qL8gimDM9" class="link pre ml4">{{ .address | markdownify }}</a>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
 
   <div class="w-50-m w-100 pa3-m">
     <iframe
-      class="lozad w-100 h5 br1 tile-shadow"
+      class="lozad w-100 h5 ba b--grey-1"
       data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.9761668069787!2d-122.78474808445782!3d45.005105879098174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54bfe39a663a4d5d%3A0xfe83b4a55e1b1fa7!2s206%20E%20Main%20St%2C%20Silverton%2C%20OR%2097381!5e0!3m2!1sen!2sus!4v1583862812783!5m2!1sen!2sus" frameborder="0" allowfullscreen=""
       data-aos="fade-in"
     ></iframe>

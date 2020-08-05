@@ -79,3 +79,24 @@ if (requiredInputs) {
     input.addEventListener('blur', e => validate(e, input));
   }
 }
+
+const brunchBtn = document.getElementById('brunch-btn');
+const brunchMenu = document.getElementById('brunch-menu');
+const dinnerBtn = document.getElementById('dinner-btn');
+const dinnerMenu = document.getElementById('dinner-menu');
+
+brunchBtn.addEventListener('click', () => {
+  brunchBtn.classList.add('active');
+  dinnerBtn.classList.remove('active');
+  brunchMenu.classList.replace('dn', 'db');
+  dinnerMenu.classList.replace('db', 'dn');
+});
+
+dinnerBtn.addEventListener('click', () => {
+  dinnerBtn.classList.add('active');
+  brunchBtn.classList.remove('active');
+  dinnerMenu.classList.replace('dn', 'db');
+  brunchMenu.classList.replace('db', 'dn');
+});
+
+brunchBtn.click();

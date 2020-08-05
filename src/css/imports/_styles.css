@@ -5,6 +5,7 @@
 
 ::selection {
   background-color: var(--highlight);
+  color: var(--black);
 }
 
 #call {
@@ -95,8 +96,8 @@
 .logo {
   padding: 30px;
   margin: var(--spacing-small);
-  background-color: var(--black);
-  color: var(--off-white);
+  background-color: var(--off-white);
+  color: var(--primary);
   border-radius: 50%;
   transition: var(--shadow-transition) !important;
 
