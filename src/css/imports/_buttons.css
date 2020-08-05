@@ -42,7 +42,7 @@
   &.menu-btn {
     box-shadow: none;
     background-image: linear-gradient(var(--white), var(--grey-1));
-    border: 1px solid var(--grey-2);
+    border: 1px solid var(--grey-1);
   
     &:hover {
       box-shadow: var(--button-press-shadow);
