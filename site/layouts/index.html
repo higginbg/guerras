@@ -17,7 +17,7 @@
     </div>
 
     {{ range .Params.menu.list }}
-      <div id="{{ .heading | lower }}-menu" class="dn mt4">
+      <div id="{{ .heading | lower }}-menu" class="animated mt4">
         {{ partial "menu" . }}
       </div>
     {{ end }}

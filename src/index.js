@@ -12,8 +12,16 @@ import menuClose from './js/modules/MenuClose';
 
 import { validate, handleForm } from './js/modules/HandleForm';
 import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
-import { nav, drpdwn, drpdwnBtn, form, requiredInputs, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
-
+import {
+  nav,
+  drpdwn,
+  drpdwnBtn,
+  form,
+  requiredInputs,
+  menuOpenIcon,
+  menuCloseIcon,
+  navSmall,
+} from './js/variables';
 
 /* Initiations */
 
@@ -29,9 +37,8 @@ AOS.init({
   startEvent: 'load',
   duration: 1000,
   once: true,
-  easing: 'ease'
+  easing: 'ease',
 });
-
 
 /* Event listeners */
 
@@ -48,7 +55,6 @@ window.addEventListener('resize', menuClose);
 window.addEventListener('scroll', navShrink);
 
 window.addEventListener('click', ({ target }) => {
-
   // close menu on click
   const tag = target.tagName.toLowerCase();
   if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
@@ -56,7 +62,10 @@ window.addEventListener('click', ({ target }) => {
   }
 
   // Add padding for nav when input is clicked
-  const height = (tag === 'input' || tag === 'textarea') ? nav.clientHeight : (-nav.clientHeight);
+  const height =
+    tag === 'input' || tag === 'textarea'
+      ? nav.clientHeight
+      : -nav.clientHeight;
   document.body.paddingTop = `${document.body.paddingTop + height}px`;
 });
 
@@ -69,7 +78,9 @@ nav.addEventListener('click', e => e.stopPropagation());
 
 drpdwnBtn.addEventListener('click', () => {
   drpdwn.classList.toggle(navSmall);
-  drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall) ? menuCloseIcon : menuOpenIcon;
+  drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall)
+    ? menuCloseIcon
+    : menuOpenIcon;
 });
 
 form && form.addEventListener('submit', e => handleForm(e));
@@ -81,22 +92,27 @@ if (requiredInputs) {
 }
 
 const brunchBtn = document.getElementById('brunch-btn');
-const brunchMenu = document.getElementById('brunch-menu');
 const dinnerBtn = document.getElementById('dinner-btn');
 const dinnerMenu = document.getElementById('dinner-menu');
+const brunchMenu = document.getElementById('brunch-menu');
+
+const switchMenu = (prevBtn, prevMenu, nextBtn, nextMenu) => {
+  prevBtn.classList.add('active');
+  nextBtn.classList.remove('active');
+  prevMenu.insertAdjacentElement('afterend', nextMenu);
+  prevMenu.classList.remove('fadeIn');
+  prevMenu.classList.add('fadeOut');
+  prevMenu.remove();
+  nextMenu.classList.remove('fadeOut');
+  nextMenu.classList.add('fadeIn');
+};
 
 brunchBtn.addEventListener('click', () => {
-  brunchBtn.classList.add('active');
-  dinnerBtn.classList.remove('active');
-  brunchMenu.classList.replace('dn', 'db');
-  dinnerMenu.classList.replace('db', 'dn');
+  switchMenu(brunchBtn, dinnerMenu, dinnerBtn, brunchMenu);
 });
 
 dinnerBtn.addEventListener('click', () => {
-  dinnerBtn.classList.add('active');
-  brunchBtn.classList.remove('active');
-  dinnerMenu.classList.replace('dn', 'db');
-  brunchMenu.classList.replace('db', 'dn');
+  switchMenu(dinnerBtn, brunchMenu, brunchBtn, dinnerMenu);
 });
 
 brunchBtn.click();
