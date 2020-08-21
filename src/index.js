@@ -6,9 +6,9 @@ import lozad from 'lozad';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import navShrink from './js/modules/NavShrink';
-import navHighlight from './js/modules/NavHighlight';
-import menuClose from './js/modules/MenuClose';
+import { navShrink } from './js/modules/NavShrink';
+import { navHighlight } from './js/modules/NavHighlight';
+import { menuClose } from './js/modules/MenuClose';
 
 import { validate, handleForm } from './js/modules/HandleForm';
 import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
@@ -52,7 +52,10 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', menuClose);
 
-window.addEventListener('scroll', navShrink);
+window.addEventListener('scroll', () => {
+  navShrink();
+  menuClose();
+});
 
 window.addEventListener('click', ({ target }) => {
   // close menu on click
@@ -77,6 +80,7 @@ document.addEventListener('touchmovde', handleTouchMove, false);
 nav.addEventListener('click', e => e.stopPropagation());
 
 drpdwnBtn.addEventListener('click', () => {
+  navShrink();
   drpdwn.classList.toggle(navSmall);
   drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall)
     ? menuCloseIcon

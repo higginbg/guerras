@@ -2,9 +2,7 @@
 
 import { drpdwn, drpdwnBtn, navSmall, menuOpenIcon } from '../variables';
 
-const menuClose = () => {
+export const menuClose = () => {
   drpdwn.classList.remove(navSmall);
   drpdwnBtn.innerHTML = menuOpenIcon;
 };
-
-export default menuClose;

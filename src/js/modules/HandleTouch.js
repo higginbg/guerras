@@ -6,12 +6,12 @@ import menuClose from './MenuClose';
 let xDown = null;
 let yDown = null;
 
-const handleTouchStart = e => {
+export const handleTouchStart = e => {
   xDown = e.touches[0].clientX;
   yDown = e.touches[0].clientY;
 };
 
-const handleTouchMove = e => {
+export const handleTouchMove = e => {
   if (!xDown || !yDown) {
     return;
   }
@@ -40,5 +40,3 @@ const handleTouchMove = e => {
   xDown = null;
   yDown = null;
 };
-
-export { handleTouchStart, handleTouchMove };

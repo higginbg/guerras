@@ -2,7 +2,7 @@
 
 import { drpdwn } from '../variables';
 
-const navHighlight = () => {
+export const navHighlight = () => {
   const links = drpdwn.querySelectorAll('li a');
   const url   = window.location.href.split('/');
   const page  = url[3];
@@ -22,5 +22,3 @@ const navHighlight = () => {
     }
   }
 };
-
-export default navHighlight;
