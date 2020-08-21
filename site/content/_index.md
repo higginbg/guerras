@@ -81,7 +81,7 @@ menu:
               price: 3
               note: White, wheat, sourdough, english muffin
             - name: Bagel
-              prie: 4
+              price: 4
               note: Plain or everything
         - footnote: '*Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness'
     - heading: Dinner
@@ -132,7 +132,7 @@ menu:
               description: Sauteed shrimp in spicy marinara sauce over cheese ravioli
               price: 25
             - name: Shrimp Scampi
-              description: Jumbo shrimp sauteed with garlic, tomato and mushrooms over angel hair pasta
+              description: Jumbo shrimp sauteed with garlic, tomato, and mushrooms over angel hair pasta
               price: 24
             - name: Lasagna
               description: Layers of pasta, parmesan, mozzarella, and italian sausage in a tomato base
@@ -159,7 +159,7 @@ menu:
               price: 26/30
             - name: Veal or Chicken Piccata*
               description: Capers, spinach, lemon butter served with spaghetti
-              price: 16/22
+              price: 22/26
             - name: Cioppino
               description: Seafood, vegetables, red wine, tomato sauce
               price: 18

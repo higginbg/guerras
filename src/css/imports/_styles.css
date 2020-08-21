@@ -96,7 +96,8 @@
 .logo {
   padding: 30px;
   margin: var(--spacing-small);
-  background-color: var(--off-white);
+  background-image: linear-gradient(var(--white), var(--grey-1));
+  border: 1px solid var(--grey-1);
   color: var(--primary);
   border-radius: 50%;
   transition: var(--shadow-transition) !important;

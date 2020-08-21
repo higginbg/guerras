@@ -12,8 +12,8 @@
     {{ partial "line-dark" }}
 
     <div class="tc mt4 no-select">
-      <button id="brunch-btn" class="btn menu-btn w4 mr1"><span class="f3">Brunch</span></button>
-      <button id="dinner-btn" class="btn menu-btn w4 ml1"><span class="f3">Dinner</span></button>
+      <button id="brunch-btn" class="btn menu-btn mr1 w4"><span>Brunch</span></button>
+      <button id="dinner-btn" class="btn menu-btn ml1 w4"><span>Dinner</span></button>
     </div>
 
     {{ range .Params.menu.list }}
@@ -36,7 +36,7 @@
 
       {{ partial "line-light" }}
 
-      {{ partial "menu" . }}
+      <!-- {{ partial "menu" . }} -->
     {{ end }}
 
   </div>

@@ -14,11 +14,12 @@
   background-origin: border-box;
   user-select: none;
 
-  &.active, &:focus {
+  &.active,
+  &:focus {
     background-image: linear-gradient(var(--primary), rgba(74, 10, 18, 1));
-    color: var(--off-white)
+    color: var(--off-white);
   }
-  
+
   i {
     opacity: 0;
     transition: var(--hover-transition);
@@ -29,47 +30,55 @@
 
     i {
       opacity: 1;
-      margin-left: var(--spacing-small); 
+      margin-left: var(--spacing-small);
     }
   }
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     box-shadow: var(--button-press-shadow);
     border: 2px solid transparent;
-    outline: 0!important;
+    outline: 0 !important;
   }
 
   &.menu-btn {
+    font-family: var(--font-cursive);
+    vertical-align: text-bottom;
     box-shadow: none;
     background-image: linear-gradient(var(--white), var(--grey-1));
     border: 1px solid var(--grey-1);
-  
+    border-radius: 50%;
+
+    & span {
+      margin-top: 5px;
+      height: 100%;
+      width: 100%;
+      font-size: 2.5em;
+      display: flex;
+      justify-content: center;
+    }
+
     &:hover {
       box-shadow: var(--button-press-shadow);
     }
 
-    &:focus, &:active {
-      box-shadow: var(--button-press-shadow);
-      outline: 0!important;
-      border: 1px solid transparent;
-      color: var(--off-white);
-    }
-
-    &:focus {
-      color: var(--grey-3);
-    }
-
+    &:focus,
     &:active {
-      color: var(--off-white);
+      box-shadow: var(--button-press-shadow);
+      outline: 0 !important;
+      border: 1px solid transparent;
+      color: var(--primary);
+      background: var(--grey-1);
     }
-  
+
     &.active {
       background-image: linear-gradient(var(--primary), rgba(74, 10, 18, 1));
       box-shadow: var(--tile-shadow);
       border: 1px solid transparent;
       cursor: default;
 
-      &:focus, &:active {
+      &:focus,
+      &:active {
         color: var(--off-white);
       }
     }
@@ -81,9 +90,9 @@
 }
 
 .btn-back:hover i {
-  margin-right: var(--spacing-small);    
+  margin-right: var(--spacing-small);
 }
 
 .btn-forward:hover i {
-  margin-left: var(--spacing-small);    
+  margin-left: var(--spacing-small);
 }

@@ -1,9 +1,9 @@
 <div data-aos="fade-in" data-aos-duration="750">
   {{ if .description }}
-    <h3 class="f4">{{ .name }}</h3>
+    <h3 class="f4">{{ .name }} <span class="ml2 f5">{{ .price }}</span> </h3>
     <p class="pv1">{{ .description }}</p>
   {{ else }}
-    <h4 class="f5">{{ .name }}</h4>
+    <h4 class="f5">{{ .name }} <span class="ml2 f5">{{ .price }}</span></h4>
     {{ with .note }}
       <p class="pl3 mb1">{{ . }}</p>
     {{ end }}
