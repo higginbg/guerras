@@ -7,97 +7,111 @@
 <!-- Menu -->
 <div id="menu" class="section bg-off-white">
   <div class="mw6 center">
-
     <h2 class="f1 tc lh-title">Menu</h2>
     {{ partial "line-dark" }}
 
     <div class="tc mt4 no-select">
-      <button id="brunch-btn" class="btn menu-btn mr1 w4"><span>Brunch</span></button>
-      <button id="dinner-btn" class="btn menu-btn ml1 w4"><span>Dinner</span></button>
+      <button id="brunch-btn" class="btn menu-btn mr1 w4">
+        <span>Brunch</span>
+      </button>
+      <button id="dinner-btn" class="btn menu-btn ml1 w4">
+        <span>Dinner</span>
+      </button>
     </div>
 
     {{ range .Params.menu.list }}
-      <div id="{{ .heading | lower }}-menu" class="animated mt4">
-        {{ partial "menu" . }}
-      </div>
+    <div id="{{ .heading | lower }}-menu" class="animated mt4">
+      {{ partial "menu" . }}
+    </div>
     {{ end }}
-
   </div>
 </div>
-
 
 <!-- Wine -->
 <div class="section bg-grey-4 off-white relative footer-shadow-light">
   <div class="mw6 center">
-    
     {{ with .Params.wine }}
 
-      <h2 id="wine" class="f1 tc lh-title">{{ .heading }}</h2>
+    <h2 id="wine" class="f1 tc lh-title">{{ .heading }}</h2>
 
-      {{ partial "line-light" }}
+    {{ partial "line-light" }}
 
-      <!-- {{ partial "menu" . }} -->
+    <!-- {{ partial "menu" . }} -->
     {{ end }}
-
   </div>
 </div>
-
 
 <!-- About -->
 <div class="section bg-off-white">
   <div class="mw6 center">
-
-    
     {{ with .Params.about }}
-
-      <h2 id="about" class="f1 tc lh-title">{{ .heading }}</h2>
-
-      {{ partial "line-dark" }}
-
-      <p data-aos="fade-in">{{ .text }}</p>
-
-    {{ end }}
+    
+    <h2 id="about" class="f1 tc lh-title">{{ .heading }}</h2>
+    
+    {{ partial "line-dark" }}
+    
+    <p data-aos="fade-in">{{ .text }}</p>
 
   </div>
-</div>
 
+  <div class="mw7 center mt5">
+    {{ range .bios }}
+
+    <div class="flex-ns flex-row justify-center mt4-ns mt5" data-aos="fade-in">
+      <div class="w-40-ns w-100">
+        <img src="{{ .img }}" alt="{{ .name }}, {{ .position }}" />
+      </div>
+
+      <div class="w-60-ns w-100 ml3-ns mt0-ns mt2">
+        <h3 class="mb3">
+          <span class="f4 db b">{{ .name }}</span>
+          <span class="db">{{ .position }}</span>
+        </h3>
+        <p>{{ .text }}</p>
+      </div>
+    </div>
+
+    {{ end }}
+  </div>
+
+    {{ end }}
+  </div>
+</div>
 
 <!-- Events -->
 <div class="section bg-grey-4 off-white relative footer-shadow-light">
   <div class="mw7 center">
-
     {{ with .Params.events }}
 
-      <h2 id="events" class="f1 tc lh-title">{{ .heading }}</h2>
+    <h2 id="events" class="f1 tc lh-title">{{ .heading }}</h2>
 
-      {{ partial "line-light" }}
+    {{ partial "line-light" }}
 
-      <p>{{ .text }}</p>
+    <p>{{ .text }}</p>
 
-      <div class="pa3-m pa2 br1 tile-shadow" style="background-color: #E3E9FF;">
-        <iframe
-          class="lozad w-100 h8-m h7"
-          data-src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23E3E9FF&amp;ctz=America%2FLos_Angeles&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23000000&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title" style="border-width:0" frameborder="0" scrolling="no"
-          data-aos="fade-in" data-aos-duration=1000  
-        ></iframe>
-      </div>
+    <div class="pa3-m pa2 br1 tile-shadow" style="background-color: #e3e9ff">
+      <iframe
+        class="lozad w-100 h8-m h7"
+        data-src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23E3E9FF&amp;ctz=America%2FLos_Angeles&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23000000&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title"
+        style="border-width: 0"
+        frameborder="0"
+        scrolling="no"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      ></iframe>
+    </div>
 
     {{ end }}
-
   </div>
 </div>
-
 
 <!-- Contact -->
 <div class="section bg-off-white">
   <div class="mw7 center">
     {{ with .Params.contact }}
 
-      <h2 id="contact" class="f1 tc lh-title">{{ .heading }}</h2>
-      {{ partial "line-dark" }}
-      {{ partial "section-contact" . }}
-
-    {{ end }}
+    <h2 id="contact" class="f1 tc lh-title">{{ .heading }}</h2>
+    {{ partial "line-dark" }} {{ partial "section-contact" . }} {{ end }}
   </div>
 </div>
 

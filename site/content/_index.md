@@ -242,6 +242,23 @@ wine:
 about:
   heading: About
   text: Nestled in the heart of the Willamette Valley, Silverton is the home of our family-owned Italian restaurant. Sharing our namesake, Guerra's is an extension of our values and our commitment to fine dining. We hope you feel like a part of the family.
+  bios:
+    - name: Tyler Rayas
+      position: General Manager
+      img: img/stock.png
+      text: I started serving tables 5 years ago at Red Lobster in Salem, I became the service manager in late 2018 and for the past two years we were able to bring our restaurant from 126th to number 14th in the world out of 715 locations! In June of 2020 Greg and Fran Guerra offered me the dream position of General Manager of their new restaurant right here in Silverton! I’m so grateful for this new opportunity with new friends. The team and I are very excited to show all of our guests an amazing experience with some of the best food and drinks in town!
+    - name: Elizabeth Hernandez
+      position: Service Manager
+      img: img/stock.png
+      text: I graduated from Loveland High School in Loveland, Colorado in 2016. In December of 2018 I moved to Salem, Oregon. I’ve worked in both private family owned restaurants and corporations like Red lobster. I’m excited for this new opportunity at Guerra’s. I hope to learn a lot about management and my part in the restaurant.
+    - name: Daynan Palmer
+      position: Kitchen Manager
+      img: img/stock.png
+      text: Graduated from Stayton High school in 2018, I started worked at Red lobster in January of 2019. In July of 2020 I got the amazing opportunity to work right here in silverton. This will be my first private restaurant as a Kitchen Manager and I look forward for the new opportunity and experiences here at Guerra’s.
+    - name: Christine Smith
+      position: Chef
+      img: img/stock.png
+      text: I was born in Virginia and grew up in Kentucky. I grew up in a family of great Southern cooks. My three passions are food, music, and Kentucky basketball (of course). I knew early on that I wanted to work with food. I was accepted into Sullivan University’s culinary program. But life and money happens and I graduated from Eastern Kentucky University with a Bachelor’s of Science in Exercise and Sports Science. I still worked in a grocery store, restaurants, and ran one of the food programs at the local YMCA to help put myself through school. I moved to Oregon about 15 years ago, with a brief stint in Williamsburg, VA. I hope to reintroduce people how to eat clean, healthy, and make food soulful again.
 events:
   heading: Events
 contact:
